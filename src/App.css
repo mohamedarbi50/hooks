@@ -1,0 +1,245 @@
+/* General styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar-custom {
+  background-color: #0a487a !important;
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid #ffcc00;
+  height: 50px;
+}
+
+.navbar-custom .navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #ffcc00 !important;
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff !important;
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffcc00 !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Card Styles */
+.card {
+  padding: 2em;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #0a487a;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-8px) scale(1.03);
+  background-color: #ffcc00;
+}
+
+.card h5 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Movie List Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-md-4 {
+  flex: 1 0 30%;
+  max-width: 30%;
+  margin-bottom: 20px;
+}
+
+.movie-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-card .card-body {
+  padding: 15px;
+}
+
+.movie-card .card-body h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.movie-card .card-body p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.movie-card .card-footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-card .card-footer .rating {
+  font-size: 1.1rem;
+  color: #f39c12;
+}
+
+/* Responsive Movie Cards */
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 1 0 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-md-4 {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Filter Container Styling */
+.filter-container {
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  gap: 2px; 
+  margin-bottom: 20px;
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+/* Left Section Styling (Search Bar & Filter) */
+.filter-container .left-section {
+  display: flex;
+  flex: 1; 
+  align-items: center;
+  gap: 15px; 
+  flex-wrap: wrap; 
+}
+
+/* Search Bar Styling */
+.search-bar {
+  flex: 1; 
+  min-width: 200px; 
+}
+
+/* Rating Filter Alignment */
+.rating-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+/* Button Section Styling */
+.filter-container .button-group {
+  display: flex;
+  gap: 10px; 
+  flex-wrap: wrap; 
+  justify-content: flex-end;
+}
+
+/* Button Styling */
+.filter-container button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 120px; 
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+/* Search Button */
+#searchbtn {
+  background-color: #0a487a;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#searchbtn:hover {
+  background-color: #ffd700;
+  color: #333;
+}
+
+/* Add Movie Button */
+#add\ movie\ btn\ btn {
+  background-color: #0a487a;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#add\ movie\ btn\ btn:hover {
+  background-color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column; 
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .left-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1px; 
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+  }
+
+  .filter-container button {
+    width: 100%; 
+  }
+}
